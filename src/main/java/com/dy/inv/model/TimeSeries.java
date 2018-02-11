@@ -17,6 +17,7 @@ public class TimeSeries {
 
     public TimeSeries() throws IOException, ParseException {
         indexSeries = new HashMap<>();
+        // TODO use resources here
         BufferedReader fr =
                 Files.newBufferedReader(Paths.get("C:\\Developer\\idx-inv\\src\\main\\resources\\bse_history.csv"));
         String line = null;
