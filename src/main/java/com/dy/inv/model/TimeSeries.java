@@ -26,7 +26,6 @@ public class TimeSeries {
             indexSeries.put(tokens[0], new DayVal(tokens[0], val));
         }
         // Set previous day's close
-        // TODO doesn't work yet
         for (Map.Entry<String, DayVal> close : indexSeries.entrySet()) {
 
 
