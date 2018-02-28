@@ -2,18 +2,17 @@ package com.dy.inv.model;
 
 import com.dy.inv.utils.Utils;
 import org.joda.time.DateTime;
-import org.joda.time.format.DateTimeFormat;
-import org.joda.time.format.DateTimeFormatter;
 
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 public class DayVal {
     private DateTime date;
     private Double val;
     private Double prevDataVal;
 
+    public double getUnits(double investment) {
+        return 1.00 * investment / val;
+    }
 
     public DateTime getDate() {
         return date;
@@ -34,7 +33,6 @@ public class DayVal {
         if (gain() == null) return false;
         return gain() < threshold;
     }
-
 
     public Double getVal() {
         return val;
